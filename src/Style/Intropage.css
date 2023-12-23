@@ -1,0 +1,91 @@
+.main {
+
+    width: 100%;
+    height: 29rem;
+    margin: 0rem;
+    display: flex;
+    
+}
+
+.intro-right,
+.intro-left {
+    height: 100%;
+    width: 50%;
+    border-bottom:1px solid rgb(221, 218, 218);
+    padding: 1rem;
+    
+}
+
+.intro-right {
+    width: 80%;
+}
+
+.intro-right {
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+}
+
+.intro-right img {
+
+    width: 17rem;
+    height: 24rem;
+    border-radius: 7rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+
+.pasta-img {
+    margin-top: 4rem;
+}
+
+.intro-text {
+    padding-left: 25%;
+    padding-top: 10%;
+    color:rgb(67, 67, 67);
+}
+
+#first-p,
+#second-p {
+    font-size: 2.5rem;
+
+}
+
+#second-p {
+    margin-top: -0.6rem;
+
+}
+
+#order-now {
+    font-size: 1.3rem;
+    margin-top: 0.8rem;
+}
+
+.search {
+    margin-top: 3rem;
+    height: 2.8rem;
+    width: 100%;
+    /* background-color: rgb(254, 175, 78); */
+    border: 0.5px solid rgb(97, 97, 97);
+    border-radius: 1rem;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.search input {
+    width: 80%;
+    border: none;
+    outline: none;
+    margin: 0.6rem 1rem;
+    font-size: 1rem;
+}
+
+.search p {
+    width: 5rem;
+    background-color: rgb(254, 179, 39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
