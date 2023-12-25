@@ -14,11 +14,10 @@ const RestCard = (props) => {
                 <img src={CDNURL + cloudinaryImageId} alt="rest-img" />
                 <div className="rest-info">
                     <h3>{name}</h3>
-                    <p>{cuisines.join(",")}</p>
+                    <p>{cuisines.join(" , ")}</p>
                     <p>{avgRating}</p>
                     <p>{sla?.deliveryTime} mins</p>
                 </div>
-
             </div>
         </>
     )

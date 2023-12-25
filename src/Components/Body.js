@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../Style/Body.css"
 import RestCard from './RestCard'
+import Shimmarui from './Shimmarui'
 
 
 const Body = () => {
@@ -21,6 +22,9 @@ const Body = () => {
     //?. is optional chaning if json1 is present then we can go for data like this to handles errors
   };
 
+  if(resofList.length===0){
+    return <Shimmarui/>;
+  }
 
   return (
     <>
