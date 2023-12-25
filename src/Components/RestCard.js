@@ -1,19 +1,20 @@
 import React from "react";
-import Logo from "../Imgs/Logo.png"
+import { CDNURL } from "../Utils/Constants";
 
 
 const RestCard = (props) => {
-    const {resName, cuisines, stars}= props.resData;
-    
+    const { resData } = props;
+    const { cloudinaryImageId, cuisines, name, avgRating, sla } = resData?.info
+
     return (
         <>
             <div className="rest-card">
-                <img src={Logo} alt="Food-img" />
+                <img src={CDNURL+cloudinaryImageId} alt="rest-img"/>
                 <div className="rest-info">
-                    <h3>{resName}</h3>
-                    <p>{cuisines}</p>
-                    <p>{stars}</p>
-                    <p>34 min</p>
+                    <h3>{name}</h3>
+                    <p>{cuisines.join(",")}</p>
+                    <p>{avgRating}</p>
+                    <p>{sla?.deliveryTime} mins</p>
                 </div>
 
             </div>
