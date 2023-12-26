@@ -1,11 +1,10 @@
-import {React, useState} from 'react'
+import {React, useState} from 'react';
 import "../Style/Header.css";
-import Logo from "../Imgs/Logo.png"
+import Logo from "../Imgs/Logo.png";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
-    
-   
    let[login, setlogout] = useState("Login");
     return (
         <>
@@ -16,9 +15,9 @@ const Header = () => {
                 <div className="right">
                     <div className="nav-items">
                         <ul>
-                            <li>Home</li>
-                            <li>About us</li>
-                            <li>Contatct us</li>
+                            <li><Link to="/">Home</Link></li>
+                            <li> <Link to="/aboutus">About us</Link></li>
+                            <li><Link to="/contactus">Contatct us</Link></li>
                         </ul>
                     </div>
                     
