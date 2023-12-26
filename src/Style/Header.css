@@ -44,6 +44,8 @@
 
 .nav-items li {
     list-style-type: none;
+    color: inherit;
+    
 }
 
 .nav-items li:hover {
