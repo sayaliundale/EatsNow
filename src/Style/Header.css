@@ -65,12 +65,24 @@
 .login {
     margin-top: 1.8rem;
     height: 50%;
-    font-size: 1.1rem;
-    letter-spacing: 0.9px;
+
+
     width: 9rem;
     background-color: rgb(254, 224, 101);
     margin-left: 6rem;
     border-radius: 1.5rem;
+
+}
+
+.login button {
+    border: none;
+    outline: none;
+    height: 50%;
+    font-size: 1rem;
+    letter-spacing: 0.9px;
+    background-color: rgb(254, 224, 101);
+
+
 }
 
 .login:hover {
