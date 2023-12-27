@@ -2,6 +2,7 @@ import React from 'react'
 import "../Style/Intropage.css";
 import Roti from "../Imgs/Roti.jpg";
 import Pasta from "../Imgs/Pasta.jpg";
+import Body from './Body';
 
 const Intropage = () => {
   return (
@@ -26,6 +27,7 @@ const Intropage = () => {
           <img src={Pasta} alt="Pasta" className="pasta-img" />
         </div>
       </div>
+     <Body/>
     </>
   )
 }

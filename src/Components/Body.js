@@ -20,8 +20,8 @@ const Body = () => {
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.8761653&lng=75.3433139&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       const json1 = await data.json();
-      setRestofList(json1?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      setFilterRest(json1?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setRestofList(json1?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setFilterRest(json1?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
       //here also we'll set the all restarunt data in setFilteredRest aslo, so whenever we'will search second time only update the setFilterRest everytime so problem is solved
 
     }
@@ -30,7 +30,7 @@ const Body = () => {
     }
   };
 
-  if (resofList.length === 0) {
+  if (resofList?.length === 0) {
     return <Shimmarui />;
   }
 
@@ -56,7 +56,7 @@ const Body = () => {
 
         <div className="container">
 
-          {filterRestaurant.map((restaurant) => (
+          {filterRestaurant?.map((restaurant) => (
             <RestCard key={restaurant.info.id} resData={restaurant} />
           ))}
 

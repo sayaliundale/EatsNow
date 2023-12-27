@@ -1,7 +1,5 @@
 import React from "react";
 import Header from "./Components/Header";
-
-import approuter from "./Components/Routers";
 import { Outlet } from "react-router-dom";
 
 
