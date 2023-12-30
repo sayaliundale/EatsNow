@@ -7,7 +7,7 @@ const RestCard = (props) => {
     const { resData } = props;
      // Destructure 'resData' from the 'props' object
     const { cloudinaryImageId, cuisines, name, avgRating, sla } = resData?.info
-    //// Destructure properties from 'resData?.info' (using optional chaining to avoid errors if 'resData' or 'info' is undefined)
+    // Destructure properties from 'resData?.info' (using optional chaining to avoid errors if 'resData' or 'info' is undefined)
 
     return (
         <>

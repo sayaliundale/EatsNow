@@ -62,32 +62,3 @@
     margin-top: 0.8rem;
 }
 
-.search {
-    margin-top: 3rem;
-    height: 2.8rem;
-    width: 100%;
-    /* background-color: rgb(254, 175, 78); */
-    border: 0.5px solid rgb(97, 97, 97);
-    border-radius: 1rem;
-    display: flex;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: white;
-}
-
-.search input {
-    width: 80%;
-    border: none;
-    outline: none;
-    margin: 0.6rem 1rem;
-    font-size: 1rem;
-}
-
-.search p {
-    width: 5rem;
-    background-color: rgb(254, 179, 39);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-}
