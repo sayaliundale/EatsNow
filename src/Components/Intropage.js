@@ -10,7 +10,7 @@ const Intropage = () => {
       <div className="main">
         <div className="intro-left">
           <div className="intro-text">
-            <p id="first-p"  > Life's too short</p>
+            <p id="first-p"> Life's too short</p>
             <p id="second-p"> to cook, <span style={{ color: "orange" }}>let's eat !</span></p>
             <p id="order-now">Order now and conquer your cravings</p>
             <p>
@@ -27,7 +27,8 @@ const Intropage = () => {
           <img src={Pasta} alt="Pasta" className="pasta-img" />
         </div>
       </div>
-     <Body/>
+      <Body />
+
     </>
   )
 }

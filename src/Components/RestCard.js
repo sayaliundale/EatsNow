@@ -1,5 +1,6 @@
 import React from "react";
 import { CDNURL } from "../Utils/Constants";
+import Star from "../Imgs/Greenstar.png"
 
 
 const RestCard = (props) => {
@@ -15,8 +16,10 @@ const RestCard = (props) => {
                 <div className="rest-info">
                     <h3>{name}</h3>
                     <p>{cuisines.join(" , ")}</p>
-                    <p>{avgRating}</p>
-                    <p>{sla?.deliveryTime} mins</p>
+                    <p>{avgRating} 
+                       <img src={Star} alt="star" style={{width:"1.2rem", marginLeft:"0.5rem", marginTop:"0.7rem" }} />
+                     <span> {sla?.deliveryTime} mins</span></p>
+                    
                 </div>
             </div>
         </>
