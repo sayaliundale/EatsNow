@@ -2,17 +2,23 @@
     width: 100%;
     margin-top: 2rem;
     /* border:1px solid black; */
-    display: flex;
+    display:flex;
 
+}
+.heading{
+    margin-top: 4rem ;
+    margin-left: 4rem;
+    
 }
 
 .rating {
-    margin-top: 15%;
+  
     border: 1px solid rgb(194, 194, 194);
     letter-spacing: 0.3px;
     width: 25%;
     height: 30rem;
     border-radius: 1rem;
+    
 
     margin: 3rem;
 
@@ -110,7 +116,7 @@
 
 .rest-card {
     width: 17rem;
-    height: 21rem;
+    height: 22rem;
     border-radius: 5px;
     background-color: rgb(243, 241, 241);
 }

@@ -1,59 +1,61 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 import Shimmarui from "./Shimmarui";
-
+import { MenuAPI } from "../Utils/Constants";
+import { useParams } from "react-router-dom";
 
 const RestaurantMenu = () => {
-    const [resInfo, setResinfo] = useState(null);
+  const [resInfo, setResinfo] = useState(null);
+  const {resId} = useParams();
 
-    useEffect(() => {
-        fetchMenu();
-    }, []);
+  useEffect(() => {
+    fetchMenu();
+  }, []);
 
-    const fetchMenu = async () => {
-        const data = await fetch(
-            "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.8761653&lng=75.3433139&restaurantId=74105&catalog_qa=undefined&submitAction=ENTER"
-        );
-
-        const json = await data.json();
-        console.log(json);
-        setResinfo(json);
+  const fetchMenu = async () => {
+    try {
+      const data = await fetch( MenuAPI+resId);
+      const json = await data.json();
+ 
+      setResinfo(json);
+    } catch (error) {
+      console.error("Error fetching menu:", error);
     }
-    if (resInfo === null) {
-        return <Shimmarui />;
-    }
+  };
 
-    const { name, cuisines, costForTwoMessage, avgRating } =
-        resInfo?.data?.cards[0]?.card?.card?.info;
+  if (resInfo === null) {
+    return <Shimmarui />;
+  }
 
-    const { itemCards } = resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
-    console.log(itemCards);
+  const restaurantInfo =
+    resInfo?.data?.cards[0]?.card?.card?.info || {};
+  const menuCards =
+    resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
+      ?.card?.itemCards || [];
 
-    return (
-        <>
-            <div className="menu" style={{ padding: "5rem 6rem" }}>
-                <h1>{name}</h1>
+  return (
+    <>
+      <div className="menu" style={{ padding: "5rem 6rem" }}>
+        <h1>{restaurantInfo.name}</h1>
 
-                <ul>
-                    <li>Cuisines : {cuisines.join(" , ")} </li>
-                    <li>Cost for Two : {costForTwoMessage}</li>
-                    <li>AvgRating : {avgRating}</li>
-                </ul>
-                
-                <br />
-                <ol style={{ listStyle: "initial" }}>
-                    <h2>Menu :</h2>
-                    <br />
-                    {itemCards.map((item) => 
-                    <li key={item.card.info.id}>
-                            {item.card.info.name} - Rs.{item.card.info.price / 100}
-                    </li>)};
+        <ul>
+          <li>Cuisines : {restaurantInfo.cuisines?.join(" , ")}</li>
+          <li>Cost for Two : {restaurantInfo.costForTwoMessage}</li>
+          <li>AvgRating : {restaurantInfo.avgRating}</li>
+        </ul>
 
-                </ol>
-            </div>
-        </>
-    );
+        <br />
+        <ol style={{ listStyle: "initial" }}>
+          <h2>Menu :</h2>
+          <br />
+          {menuCards.map((item) => (
+            <li key={item.card.info.id}>
+              {item.card.info.name} - Rs.{item.card.info.price / 100}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </>
+  );
+};
 
-
-
-}
-export default RestaurantMenu
+export default RestaurantMenu;
