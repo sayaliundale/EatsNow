@@ -44,8 +44,8 @@ const Body = () => {
       );
       const json1 = await data.json();
       console.log(json1);
-      setRestofList(json1?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      setFilterRest(json1?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setRestofList(json1?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setFilterRest(json1?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     } catch (error) {
       console.error("Error fetching data:", error);
     }

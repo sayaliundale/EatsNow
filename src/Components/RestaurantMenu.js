@@ -5,17 +5,17 @@ import { useParams } from "react-router-dom";
 
 const RestaurantMenu = () => {
   const [resInfo, setResinfo] = useState(null);
-  const {resId} = useParams();
+  const { resId } = useParams();
 
   useEffect(() => {
     fetchMenu();
-  }, []);
+  });
 
   const fetchMenu = async () => {
     try {
-      const data = await fetch( MenuAPI+resId);
+      const data = await fetch(MenuAPI + resId);
       const json = await data.json();
- 
+
       setResinfo(json);
     } catch (error) {
       console.error("Error fetching menu:", error);
@@ -43,12 +43,12 @@ const RestaurantMenu = () => {
           <li>AvgRating : {restaurantInfo.avgRating}</li>
         </ul>
 
-        <br />
+        <br/>
         <ol style={{ listStyle: "initial" }}>
           <h2>Menu :</h2>
-          <br />
-          {menuCards.map((item) => (
-            <li key={item.card.info.id}>
+          <br/>
+              {menuCards.map((item) => (
+              <li key={item.card.info.id}>
               {item.card.info.name} - Rs.{item.card.info.price / 100}
             </li>
           ))}
