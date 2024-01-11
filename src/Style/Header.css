@@ -107,6 +107,7 @@
         margin-left: 20%;
         gap: 1rem;
     }
+   
 }
 
 @media only screen and (max-width: 1000px) {
@@ -139,36 +140,74 @@
         flex-direction: column;
         position: relative;
         width: 60%;
-        /* background-color: rgb(248, 248, 231); */
-        background-color: red;
+        
         gap: 0rem;
         height:20rem;
     }
 
     .right-responsive {
 
-        flex-direction: column;
-        position: relative;
-        right: 1rem;
-        width: 60%;
-        background-color: rgb(248, 248, 231);
-        height:18rem;
-        gap: 0rem;
-        padding-left: 5rem;
+        display: flex;
+    flex-direction: column;
+    position: absolute;
+   padding-left: 5rem;
+    right: 1rem; 
+    background-color: rgb(254, 250, 233);
+    z-index: 1;
+    width:40%;
 
     }
 
     .login button,
     .login {
         background-color: transparent;
+        
     }
 
     .login {
         font-size: 1.2rem;
-        margin-right: 10rem;
+        height:1.5rem;
+        position: relative;
+       right:1.5rem;
+       font-size: 1.3rem;
+        
     }
-    .cart{
-        margin-top: -7rem;
+   
+
+}
+@media only screen and (max-width:750px){
+    .login{
+        right:0.5%;
+        top:-1rem;
+    }
+    .right{
+        margin:0rem;
+    }
+    .header{
+        margin-right: 0rem;;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .right {
+        width: 90% ; 
+    }
+    .nav-items ul{
+        width:50%;
+        padding-left: 3rem;
+    }
+
+    .right-responsive {
+        width: 90% ; 
+        padding-left: 5rem;
+        top:5rem;
+    }
+    .login{
+        right:10%;
+        top:-1rem;
+    }
+    .login,.cart{
+        padding-left: 3.9rem;
     }
 
 }
