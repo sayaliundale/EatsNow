@@ -93,3 +93,35 @@ textarea {
 .submitbtn:hover {
   background-color: #0056b3;
 }
+@media only screen and (max-width:1000px){
+  .about{
+    height:49rem;
+  }
+  .about-us{
+    margin-top: 4rem;
+    width:50%;
+    font-size: 0.9rem;;
+  }
+  .contact-us{
+    width:50%;
+  }
+}
+@media only screen and (max-width:550px){
+  .about{
+    height:50rem;
+  
+  }
+  .about-us{
+    
+    padding:2rem;
+    margin:1rem;
+    margin-top: 0;
+    width:70%
+  }
+  .contact-us{
+    padding:2rem;
+    font-size: 0.9rem;
+    margin: 1rem;
+  }
+
+}

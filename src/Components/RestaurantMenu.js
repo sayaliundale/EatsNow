@@ -1,26 +1,12 @@
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import Shimmarui from "./Shimmarui";
-import { MenuAPI } from "../Utils/Constants";
 import { useParams } from "react-router-dom";
+import useRestaurantMenu from "../Utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
-  const [resInfo, setResinfo] = useState(null);
+  
   const { resId } = useParams();
-
-  useEffect(() => {
-    fetchMenu();
-  });
-
-  const fetchMenu = async () => {
-    try {
-      const data = await fetch(MenuAPI + resId);
-      const json = await data.json();
-
-      setResinfo(json);
-    } catch (error) {
-      console.error("Error fetching menu:", error);
-    }
-  };
+  const resInfo = useRestaurantMenu(resId);
 
   if (resInfo === null) {
     return <Shimmarui />;

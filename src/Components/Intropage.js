@@ -3,9 +3,18 @@ import "../Style/Intropage.css";
 import Roti from "../Imgs/Roti.jpg";
 import Pasta from "../Imgs/Pasta.jpg";
 import Body from './Body';
-import Food from "../Imgs/Food_Delivery_System-.png"
+import Food from "../Imgs/Food_Delivery_System-.png";
+import useOnline from '../Utils/useOnline';
 
 const Intropage = () => {
+  const onlineStatus = useOnline();
+  if(onlineStatus===false){
+    return <>
+      <div className="onlineStatus">
+          <p>Offline   {'🔴'}</p>
+      </div>
+    </>
+  }
   return (
     <>
       <div className="main">

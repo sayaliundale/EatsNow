@@ -147,13 +147,13 @@
 
     .right-responsive {
 
-        display: flex;
+    display: flex;
     flex-direction: column;
     position: absolute;
-   padding-left: 5rem;
+    padding-left: 5rem;
     right: 1rem; 
     background-color: rgb(254, 250, 233);
-    z-index: 1;
+    
     width:40%;
 
     }
@@ -186,6 +186,9 @@
     .header{
         margin-right: 0rem;;
     }
+    .nav-items ul,.login{
+        font-size: 0.9rem;
+    }
 }
 
 @media only screen and (max-width:500px){
@@ -195,16 +198,20 @@
     .nav-items ul{
         width:50%;
         padding-left: 3rem;
+        font-size: 0.9rem;
     }
 
     .right-responsive {
         width: 90% ; 
         padding-left: 5rem;
         top:5rem;
+        
+        
     }
     .login{
         right:10%;
         top:-1rem;
+        font-size: 01rem;
     }
     .login,.cart{
         padding-left: 3.9rem;
@@ -214,13 +221,21 @@
 @media only screen and(max-width:400px) {
     .header{
         width:10rem;
-    
+       
+    }
+    .right{
+        width:30%;
+        visibility: visible;     
+    }
+    .nav-items ul{
+        width:2rem;
+        font-size: 0.5rem;
+        position: relative;
+        right:6rem;
     }
    
     .hamburger{
         margin-right: 0rem;
     }
-    .right-responsive{
-        margin-right: 0;
-    }
+    
 }
