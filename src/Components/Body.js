@@ -7,9 +7,7 @@ import star2 from "../Imgs/star2.png"
 import star3 from "../Imgs/star3.png"
 import {Link} from "react-router-dom";
 
-
 const Body = () => {
-
 
   const [resofList, setRestofList] = useState([]);
   const [filterRestaurant, setFilterRest] = useState([]);
@@ -18,12 +16,9 @@ const Body = () => {
   const [searchText, setSearchtext] = useState("");
   const [filterbystar, setFilterByStar] = useState(false);//like flag for checkbox
 
-
   useEffect(() => {
     fetchdata();
   }, []);
-
-  
 
   const starfilter = (min, max) => {
     if (filterbystar) {
@@ -55,8 +50,6 @@ const Body = () => {
       console.error("Error fetching data:", error);
     }
   };
-  
- 
 
   if (resofList?.length === 0) {
     return <Shimmarui />;
@@ -64,7 +57,7 @@ const Body = () => {
 
   return (
     <>
-
+   
    <h2 className="heading">Restaurants with online food delivery in Aurangabad</h2>
       <div className="body">
       
