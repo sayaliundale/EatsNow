@@ -6,6 +6,7 @@ import Error from '../Components/Error';
 import Intropage from '../Components/Intropage';
 import Contactus from '../Components/Contactus';
 import RestaurantMenu from './RestaurantMenu';
+import Cart from './Cart';
 
 const approuter = createBrowserRouter(//array of objects
   [
@@ -35,6 +36,10 @@ const approuter = createBrowserRouter(//array of objects
             path :"/restaurants/:resId", 
             element:<RestaurantMenu/>,
             
+          },
+          {
+            path :"/path",
+            element:<Cart/>
           }
         ],
       errorElement:<Error/>
