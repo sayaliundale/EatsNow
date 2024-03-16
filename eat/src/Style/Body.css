@@ -85,8 +85,78 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    font-size: 1.3rem;
 }
+
+.veg-only {
+    margin-top: 8rem;
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 2rem;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+    background-color: #ccc;
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
+
+.toggle-switch input[type="checkbox"] {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    transition: background-color 0.4s;
+}
+
+.toggle-switch.active .slider {
+    background-color: #4CAF50;
+}
+
+.symbol {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    bottom: 2px;
+    right: 2px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.1rem;
+    background-color: white;
+    transition: transform 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 0.58rem;
+    height: 0.58rem;
+    border-radius: 50%;
+    background-color: green;
+    transition: transform 0.4s;
+    opacity: 0;
+}
+
+.toggle-switch.active .symbol {
+    transform: translateX(24px);
+}
+
+.toggle-switch.active .circle {
+    transform: translateX(1px);
+    opacity: 1;
+}
+
+
 
 .starbutton p {
     display: flex;
@@ -161,19 +231,23 @@
     background-color: rgb(236, 235, 235);
 
 }
-.onlineStatus{
-    width:10rem;
+
+.onlineStatus {
+    width: 10rem;
     align-items: center;
     border-radius: 10px;
-    float:right;
+    float: right;
     margin-right: 10rem;
     text-align: center;
-    height:2.5rem;
-    display:flex;
+    height: 2.5rem;
+    display: flex;
     justify-content: center;
     font-size: 1.2rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-   
+
+}
+.cartpage{
+    padding:2rem;
 }
 
 @media only screen and (max-width:1480px) {
@@ -192,7 +266,9 @@
 }
 
 @media only screen and (max-width: 1440px) {
-    .rest-card , .shimmer-ui{
+
+    .rest-card,
+    .shimmer-ui {
         width: 20rem;
         height: 22rem;
 
@@ -212,7 +288,9 @@
 }
 
 @media only screen and (max-width: 1270px) {
-    .rest-card, .shimmer-ui {
+
+    .rest-card,
+    .shimmer-ui {
         width: 17rem;
         height: 22rem;
 
@@ -224,7 +302,8 @@
 
     }
 
-    .container,.shimmer-container {
+    .container,
+    .shimmer-container {
         justify-content: center;
         padding: 0;
     }
@@ -273,20 +352,23 @@
 
     }
 
-    .rest-card,.shimmer-ui {
+    .rest-card,
+    .shimmer-ui {
         width: 15rem;
         height: 23rem;
 
     }
 
-    .container , .shimmer-container{
+    .container,
+    .shimmer-container {
         justify-content: space-around;
         padding: 1rem;
     }
-    .shimmer-container{
-        width:90%;
+
+    .shimmer-container {
+        width: 90%;
         margin-top: 30rem;
-       margin-left: 5%;
+        margin-left: 5%;
     }
 
     .starbutton {
@@ -306,7 +388,9 @@
 }
 
 @media only screen and (max-width:770px) {
-    .rest-card ,.shimmer-ui{
+
+    .rest-card,
+    .shimmer-ui {
         width: 13rem;
         height: 23rem;
 
@@ -345,36 +429,43 @@
         width: 7rem;
     }
 
-    .container,.shimmer-container {
+    .container,
+    .shimmer-container {
         justify-content: center;
         font-size: 1rem;
     }
 }
 
 @media only screen and (max-width:500px) {
-    .rest-card,.shimmer-ui{
-        width:13rem;
-        height:20rem
+
+    .rest-card,
+    .shimmer-ui {
+        width: 13rem;
+        height: 20rem
     }
-    .rating{
-        width:80%;
+
+    .rating {
+        width: 80%;
         margin-right: 0;
     }
-    .rest-info{
-        font-size:0.8rem ;
+
+    .rest-info {
+        font-size: 0.8rem;
     }
-    .rating{
+
+    .rating {
         margin-right: 0;
     }
+
     .search-header {
         height: 1.3rem;
-       
+
     }
 
     .search-header h2 {
         font-size: 1.1rem;
-        width:8rem;
-        
+        width: 8rem;
+
     }
 
     .serach-filter {
@@ -384,35 +475,42 @@
     }
 
     .starbutton {
-       
-        width:auto;
+
+        width: auto;
     }
-    .searchRest{
-        margin-right:1.2rem ;
+
+    .searchRest {
+        margin-right: 1.2rem;
     }
-    .searchfunc span{
+
+    .searchfunc span {
         padding-left: 10%;
-        width:2rem;
+        width: 2rem;
     }
-    .searchfunc{
-        height:2.1rem;
-        
+
+    .searchfunc {
+        height: 2.1rem;
+
     }
 }
-@media only screen and (max-width:400px){
-    
-    .searchfunc{
-        width:15rem;
+
+@media only screen and (max-width:400px) {
+
+    .searchfunc {
+        width: 15rem;
         padding-left: 0;
-        
+
     }
-    .serach-filter{
+
+    .serach-filter {
         padding-left: 1.6rem;
     }
+
     .searchRest {
         margin-right: 0;
     }
-    .rating{
+
+    .rating {
         margin-right: 0;
     }
 

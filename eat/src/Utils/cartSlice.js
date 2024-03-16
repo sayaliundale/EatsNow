@@ -1,26 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
-    name: 'cart',
-    initialState: {
-        items: []
+  name: 'cart',
+  initialState: {
+    items: []
+  },
+  reducers: {
+    addItem: (state, action) => {
+      state.items.push(action.payload);
     },
-    reducers: {
-        addItem: (state, action) => {
-            state.items.push(action.payload);
-        },
-        removeItem: (state, action) => {
-            const indexToRemove = state.items.findIndex(item => 
-                item.card.info.id === action.payload.card.info.id);
-
-            if (indexToRemove !== -1) {
-                state.items.splice(indexToRemove, 1);
-            }
-        },
-        clearCart: (state, action) => {
-            state.items.length = 0;
-        }
+    removeItem: (state, action) => {
+      state.items = state.items.filter(item => item.card.name !== action.payload.name);
+    },
+    clearCart: (state) => {
+      state.items = [];
     }
+  }
 });
 
 export const { addItem, removeItem, clearCart } = cartSlice.actions;

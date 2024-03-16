@@ -25,7 +25,7 @@ const RestaurantMenu = () => {
         console.error(json1.error);
         setResinfo(null);
       } else {
-        setResinfo(json1.categories);
+        setResinfo(json1);
       }
   
     } catch (error) {
@@ -34,15 +34,16 @@ const RestaurantMenu = () => {
     }
   };
   
-
   if (resInfo == null) {
     return <Shimmarui />;
   }
 
   return (
     <>
+   
       <div className="menu">
-        <Itemlist menuInfo={resInfo} />
+      <h1>{resInfo.name}</h1>
+        <Itemlist menuInfo={resInfo.categories} />
       </div>
     </>
   );

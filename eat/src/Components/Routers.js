@@ -20,12 +20,9 @@ const approuter = createBrowserRouter(//array of objects
             element: <Intropage />
 
           },
-
-
           {
             path: "/aboutus",
             element: <Aboutus />,
-
           },
           {
             path: "/contactus",
