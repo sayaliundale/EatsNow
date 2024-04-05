@@ -1,4 +1,3 @@
-// cartSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -24,10 +23,18 @@ export const cartSlice = createSlice({
     },
     decrementQuantity: (state, action) => {
       const itemIndex = action.payload;
-      if (itemIndex >= 0 && itemIndex < state.items.length && state.items[itemIndex].quantity > 1) {
-        state.items[itemIndex].quantity -= 1;
+      if (itemIndex >= 0 && itemIndex < state.items.length) {
+        const currentItem = state.items[itemIndex];
+
+        if (currentItem.quantity === 1) {
+          state.items.splice(itemIndex, 1);
+        } else if (currentItem.quantity > 1) {
+          currentItem.quantity -= 1;
+        }
+        
       }
     },
+    
   },
 });
 

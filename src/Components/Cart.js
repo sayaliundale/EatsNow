@@ -1,4 +1,3 @@
-// Cart.js
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { incrementQuantity, decrementQuantity } from '../Utils/cartSlice';
@@ -14,6 +13,10 @@ const Cart = () => {
   const decrementCount = (itemIndex) => {
     dispatch(decrementQuantity(itemIndex));
   };
+
+  const totalPrice = cartItems.reduce((total, item) => {
+    return total + (item.price * item.quantity);
+  }, 0);
 
   return (
     <div className="cartpage">
@@ -37,7 +40,7 @@ const Cart = () => {
           </div>
         ))}
         <div className="total">
-          <h3>Total : Rs. { }</h3>
+          <h3>Total : Rs. {totalPrice}</h3>
         </div>
       </div>
     </div>
