@@ -1,22 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { incrementQuantity, decrementQuantity } from '../Utils/cartSlice';
 
 const Cart = () => {
-  const dispatch = useDispatch();
-  const cartItems = useSelector((state) => state.cart.items);
+    const dispatch = useDispatch();
+    const cartItems = useSelector(state => state.cart.items);
 
-  const incrementCount = (itemIndex) => {
-    dispatch(incrementQuantity(itemIndex));
-  };
+  // Load cart items from local storage when component mounts
+    useEffect(() => {
+        const savedCartItems = JSON.parse(localStorage.getItem('cartItems'));
+        if (savedCartItems) {
+            dispatch({ type: 'cart/setItems', payload: savedCartItems });
+        }
+      }, [dispatch]);
 
-  const decrementCount = (itemIndex) => {
-    dispatch(decrementQuantity(itemIndex));
-  };
+  // Save cart items to local storage whenever cart items change
+    useEffect(() => {
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }, [cartItems]);
 
-  const totalPrice = cartItems.reduce((total, item) => {
-    return total + (item.price * item.quantity);
-  }, 0);
+    const incrementCount = (itemIndex) => {
+        dispatch(incrementQuantity(itemIndex));
+    };
+
+    const decrementCount = (itemIndex) => {
+       dispatch(decrementQuantity(itemIndex));
+    };
+
+    const totalPrice = cartItems.reduce((total, item) => {
+      return total + (item.price * item.quantity);
+    }, 0);
 
   return (
     <div className="cartpage">
@@ -40,7 +53,7 @@ const Cart = () => {
           </div>
         ))}
         <div className="total">
-          <h3>Total : Rs. {totalPrice}</h3>
+          <h3>Total : Rs. {totalPrice.toFixed(2)}</h3>
         </div>
       </div>
     </div>

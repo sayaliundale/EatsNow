@@ -1,17 +1,18 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { addItem} from '../Utils/cartSlice';
+import { addItem } from '../Utils/cartSlice';
 
 const Itemlist = ({ menuInfo }) => {
   const dispatch = useDispatch();
 
   const handleAddItem = (item) => {
-    // Dispatch the addItem action with the item
-    dispatch(addItem(item));
+    const itemWithQuantity = { ...item, quantity: 1 }; 
+    dispatch(addItem(itemWithQuantity));
+    
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const updatedCartItems = [...cartItems, itemWithQuantity]; 
+    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
   };
-
-
-
 
   return (
     <div className="accordion">
@@ -25,12 +26,9 @@ const Itemlist = ({ menuInfo }) => {
           <div className="item-img">
             <img src={item?.card?.img} alt="img" />
             <p className="addtocart">
-
               <span onClick={() => handleAddItem(item?.card)}> + </span>Add
-            
             </p>
           </div>
-         
         </div>
       ))}
     </div>
