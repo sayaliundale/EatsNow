@@ -1,0 +1,517 @@
+* {
+    text-decoration: none !important;
+}
+
+.body {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+}
+
+.heading {
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+
+.rating {
+    border: 1px solid rgb(194, 194, 194);
+    letter-spacing: 0.3px;
+    width: 25%;
+    height: 30rem;
+    border-radius: 1rem;
+    margin: 3rem;
+}
+
+.search-header {
+    padding: 1.2rem 6rem;
+    background-color: rgb(255, 196, 0);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.searchfunc {
+    border: 1px solid rgb(133, 132, 132);
+    border-radius: 1rem;
+    width: 20rem;
+    height: 2.5rem;
+    display: flex;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.searchRest {
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    width: 18rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.searchfunc span {
+    background-color: rgb(255, 196, 0);
+    width: 3.5rem;
+    padding: 0.5rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.searchfunc svg {
+    float: right;
+    width: 3.5rem
+}
+
+.serach-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    margin-top: 5rem;
+}
+
+.starbutton {
+    width: 20rem;
+    height: 3rem;
+    border-radius: 0.8rem;
+    outline: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.veg-only {
+    margin-top: 8rem;
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 2rem;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+    background-color: #ccc;
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
+
+.toggle-switch input[type="checkbox"] {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    transition: background-color 0.4s;
+}
+
+.toggle-switch.active .slider {
+    background-color: #4CAF50;
+}
+
+.symbol {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    bottom: 2px;
+    right: 2px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.1rem;
+    background-color: white;
+    transition: transform 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 0.58rem;
+    height: 0.58rem;
+    border-radius: 50%;
+    background-color: green;
+    transition: transform 0.4s;
+    opacity: 0;
+}
+
+.toggle-switch.active .symbol {
+    transform: translateX(24px);
+}
+
+.toggle-switch.active .circle {
+    transform: translateX(1px);
+    opacity: 1;
+}
+
+
+
+.starbutton p {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.starbutton img {
+    width: 10.2rem;
+    height: 2.2rem;
+}
+
+.container {
+    padding: 3rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.rest-card {
+    width: 17rem;
+    height: 22rem;
+    border-radius: 5px;
+    background-color: rgb(243, 241, 241);
+    color: rgb(55, 54, 54);
+}
+
+.rest-info {
+    padding: 1rem;
+    overflow: visible;
+    overflow-wrap: normal;
+    text-decoration: none !important;
+
+
+}
+
+.rest-info a {
+    text-decoration: none;
+}
+
+
+.search-info {
+    padding-left: 2rem;
+    background-color: beige;
+    width: 91%;
+    height: 16rem;
+}
+
+.rest-card img {
+    width: 100%;
+    height: 48%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.rest-card:hover {
+    border: 1px solid rgb(89, 88, 88);
+}
+
+.shimmer-container {
+    display: flex;
+    gap: 2rem;
+    padding: 12rem 5rem;
+    flex-wrap: wrap;
+    margin-left: 30%;
+}
+
+.shimmer-ui {
+    width: 17rem;
+    height: 22rem;
+    border-radius: 5px;
+    background-color: rgb(236, 235, 235);
+
+}
+
+.onlineStatus {
+    width: 10rem;
+    align-items: center;
+    border-radius: 10px;
+    float: right;
+    margin-right: 10rem;
+    text-align: center;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+.cartpage{
+    padding:2rem;
+}
+
+@media only screen and (max-width:1480px) {
+    .rest-card {
+        width: 17rem;
+        height: 23rem;
+    }
+
+    .rating {
+        width: 23%;
+    }
+
+    .searchfunc {
+        width: 18rem;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+
+    .rest-card,
+    .shimmer-ui {
+        width: 20rem;
+        height: 22rem;
+
+    }
+
+    .rating {
+        width: 100%;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .searchfunc {
+        width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+
+    .rest-card,
+    .shimmer-ui {
+        width: 17rem;
+        height: 22rem;
+
+    }
+
+    .rating {
+        width: 30%;
+        padding-left: 0rem;
+
+    }
+
+    .container,
+    .shimmer-container {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .searchfunc {
+        width: 18rem;
+        font-size: 0.8rem;
+        padding-left: 2rem;
+        ;
+    }
+
+    .starbutton {
+        width: 18rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .heading {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+
+    .body {
+        flex-direction: column;
+    }
+
+    .rating {
+        width: 80%;
+        height: 20rem;
+        padding-left: 0rem;
+        font-size: 1rem;
+    }
+
+    .serach-filter {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: -5rem;
+        padding-left: 6rem;
+    }
+
+    .searchRest {
+        font-size: 0.9rem;
+
+    }
+
+    .rest-card,
+    .shimmer-ui {
+        width: 15rem;
+        height: 23rem;
+
+    }
+
+    .container,
+    .shimmer-container {
+        justify-content: space-around;
+        padding: 1rem;
+    }
+
+    .shimmer-container {
+        width: 90%;
+        margin-top: 30rem;
+        margin-left: 5%;
+    }
+
+    .starbutton {
+        width: 10rem;
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    .starbutton img {
+        width: 8rem;
+    }
+
+    .searchfunc {
+        padding: 0rem;
+
+    }
+}
+
+@media only screen and (max-width:770px) {
+
+    .rest-card,
+    .shimmer-ui {
+        width: 13rem;
+        height: 23rem;
+
+    }
+
+    .rating {
+        width: 90%
+    }
+
+    .serach-filter {
+        width: 75%;
+        gap: 0.5rem;
+        padding-left: 4rem;
+
+    }
+
+    .searchRest {
+        width: 12rem;
+        font-size: 0.8rem;
+
+    }
+
+    .searchfunc {
+        padding: 0rem;
+        font-size: 0.7rem;
+
+    }
+
+    .starbutton {
+        width: 20rem;
+        font-size: 1rem;
+
+    }
+
+    .starbutton img {
+        width: 7rem;
+    }
+
+    .container,
+    .shimmer-container {
+        justify-content: center;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:500px) {
+
+    .rest-card,
+    .shimmer-ui {
+        width: 13rem;
+        height: 20rem
+    }
+
+    .rating {
+        width: 80%;
+        margin-right: 0;
+    }
+
+    .rest-info {
+        font-size: 0.8rem;
+    }
+
+    .rating {
+        margin-right: 0;
+    }
+
+    .search-header {
+        height: 1.3rem;
+
+    }
+
+    .search-header h2 {
+        font-size: 1.1rem;
+        width: 8rem;
+
+    }
+
+    .serach-filter {
+        flex-direction: column;
+        gap: 1rem;
+        height: 8rem;
+    }
+
+    .starbutton {
+
+        width: auto;
+    }
+
+    .searchRest {
+        margin-right: 1.2rem;
+    }
+
+    .searchfunc span {
+        padding-left: 10%;
+        width: 2rem;
+    }
+
+    .searchfunc {
+        height: 2.1rem;
+
+    }
+}
+
+@media only screen and (max-width:400px) {
+
+    .searchfunc {
+        width: 15rem;
+        padding-left: 0;
+
+    }
+
+    .serach-filter {
+        padding-left: 1.6rem;
+    }
+
+    .searchRest {
+        margin-right: 0;
+    }
+
+    .rating {
+        margin-right: 0;
+    }
+
+}
