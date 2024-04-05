@@ -60,9 +60,11 @@
     border-bottom-right-radius: 1rem;
 }
 
-.searchfunc svg {
+.searchfunc img {
+    padding-right: 1rem;
     float: right;
-    width: 3.5rem
+    width: 1.5rem;
+    
 }
 
 .serach-filter {
@@ -246,8 +248,9 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
-.cartpage{
-    padding:2rem;
+
+.cartpage {
+    padding: 2rem;
 }
 
 @media only screen and (max-width:1480px) {
