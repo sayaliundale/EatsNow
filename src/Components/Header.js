@@ -50,8 +50,8 @@ const Header = () => {
 
                     <div className="cart">
                         <Link to="/path">
-                            <img src={Parcel} alt="" />
-                            ({calculateTotalItems()} items)
+                            <img src={Parcel} alt="Parcel-img" />
+                            <p>{calculateTotalItems()}</p>
                         </Link>
                     </div>
 

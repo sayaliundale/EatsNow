@@ -1,47 +1,54 @@
 import React from 'react';
-import App from '../App';
 import { createBrowserRouter } from "react-router-dom";
+import App from '../App';
 import Aboutus from "../Components/Aboutus";
 import Error from '../Components/Error';
 import Intropage from '../Components/Intropage';
 import Contactus from '../Components/Contactus';
 import RestaurantMenu from './RestaurantMenu';
+import Signup from './Authentication/Signup';
 import Cart from './Cart';
+import Login from './Authentication/Login';
 
-const approuter = createBrowserRouter(//array of objects
+const approuter = createBrowserRouter(
   [
     {
+      path: "/signup", 
+      element: <Signup />
+    },
+    {
+      path:"/login",
+      element:<Login/>
+    },
+    {
       path: "/",
-      element: <App />,
-      children:
-        [
-          {
-            path: "/",
-            element: <Intropage />
-
-          },
-          {
-            path: "/aboutus",
-            element: <Aboutus />,
-          },
-          {
-            path: "/contactus",
-            element: <Contactus />,
-
-          },
-          {
-            path: "/restaurant/:res_id",
-            element: <RestaurantMenu />,
-
-          },
-          {
-            path: "/path",
-            element: <Cart />
-          }
-        ],
+      element: <App />, 
+      children: [
+        {
+          path: "/intropage",
+          element: <Intropage />
+        },
+        {
+          path: "/aboutus",
+          element: <Aboutus />
+        },
+        {
+          path: "/contactus",
+          element: <Contactus />
+        },
+        {
+          path: "/restaurant/:res_id",
+          element: <RestaurantMenu />
+        },
+        {
+          path: "/cart",
+          element: <Cart />
+        }
+      ],
       errorElement: <Error />
     }
   ]
 );
+
 
 export default approuter;

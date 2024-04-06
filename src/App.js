@@ -9,6 +9,7 @@ import appStore from "./Utils/appStore";
 const App = () => {
   return (
     <>
+    
       <Provider store={appStore}>
         <Header />
         <Outlet />

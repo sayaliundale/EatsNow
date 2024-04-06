@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-
 }
 
 .header {
@@ -39,8 +38,6 @@
     margin-top: 2rem;
     width: 180%;
     height: 50%;
-
-
 }
 
 .nav-items li {
@@ -52,11 +49,27 @@
     border-bottom: 5px solid orange;
 }
 
-.cart img {
-    width: 3.7rem;
-    height: 3.4rem;
+.cart {
+    display: flex;
     justify-content: center;
-    margin-top: 2rem;
+}
+
+.cart img {
+    width: 3rem;
+    height: 2.5rem;
+    position: relative;
+    top: 2rem
+}
+
+.cart p {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(255, 205, 113);
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    top: -1.5rem;
+    left: 1.5rem;
 }
 
 .login {
@@ -70,7 +83,6 @@
     gap: 0.7rem;
     justify-content: center;
     align-items: center;
-    
 }
 
 .login button {
@@ -82,9 +94,10 @@
     background-color: rgb(254, 224, 101);
 
 }
-.login img{
-    width:2rem;
-    height:2rem;
+
+.login img {
+    width: 2rem;
+    height: 2rem;
 }
 
 .login:hover {
@@ -94,8 +107,8 @@
 
 .hamburger img {
     visibility: hidden;
-    width:2rem;
-    height:2rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -144,28 +157,23 @@
         flex-direction: column;
         position: relative;
         width: 60%;
-
         gap: 0rem;
         height: 20rem;
     }
 
     .right-responsive {
-
         display: flex;
         flex-direction: column;
         position: absolute;
         padding-left: 5rem;
         right: 1rem;
         background-color: rgb(254, 250, 233);
-
         width: 40%;
-
     }
 
     .login button,
     .login {
         background-color: transparent;
-
     }
 
     .login {
@@ -174,9 +182,7 @@
         position: relative;
         right: 1.5rem;
         font-size: 1.3rem;
-
     }
-
 
 }
 
@@ -192,7 +198,6 @@
 
     .header {
         margin-right: 0rem;
-        ;
     }
 
     .nav-items ul,
@@ -216,8 +221,6 @@
         width: 90%;
         padding-left: 5rem;
         top: 5rem;
-
-
     }
 
     .login {
@@ -230,7 +233,6 @@
     .cart {
         padding-left: 3.9rem;
     }
-
 }
 
 @media only screen and(max-width:400px) {
@@ -254,5 +256,4 @@
     .hamburger {
         margin-right: 0rem;
     }
-
 }
