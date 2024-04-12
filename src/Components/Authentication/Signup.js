@@ -28,12 +28,10 @@ const Signup = () => {
             if (!response.ok) {
                 throw new Error('Failed to register user');
             }
-    
             const data = await response.json();
             console.log(data);
-    
-            // Navigate to login page after successful registration
             navigate('/login');
+            
         } catch (error) {
             console.error("Error registering user:", error);
             setError("Error registering user");

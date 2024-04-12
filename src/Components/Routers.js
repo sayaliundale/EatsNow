@@ -15,6 +15,7 @@ const approuter = createBrowserRouter(
     {
       path: "/signup", 
       element: <Signup />
+      
     },
     {
       path:"/login",
@@ -25,7 +26,7 @@ const approuter = createBrowserRouter(
       element: <App />, 
       children: [
         {
-          path: "/intropage",
+          path: "/",
           element: <Intropage />
         },
         {
@@ -41,7 +42,7 @@ const approuter = createBrowserRouter(
           element: <RestaurantMenu />
         },
         {
-          path: "/cart",
+          path: "/path",
           element: <Cart />
         }
       ],
@@ -49,6 +50,5 @@ const approuter = createBrowserRouter(
     }
   ]
 );
-
 
 export default approuter;

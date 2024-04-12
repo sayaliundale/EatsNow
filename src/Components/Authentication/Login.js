@@ -1,28 +1,41 @@
 import React, { useState } from 'react'
 import "../../Style/Authentication.css";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     
 async function loginUser(event) {
     event.preventDefault();
-
-    const response = await fetch("http://localhost:8000/api/login", {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'applicaton/json'
-        },
-        body: JSON.stringify({
-            email, password
-        })
-    });
-
-    const data = await response.json();
-    console.log(data);
+        console.log("Loging user:", email, password);
+        
+        try {
+            const response = await fetch("http://localhost:8000/api/login", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                     email, password
+                })
+            });
+    
+            if (!response.ok) {
+                throw new Error('Failed to register user');
+            }
+            const data = await response.json();
+            console.log(data);
+            navigate('/');
+            
+        } catch (error) {
+            console.error("Error registering user:", error);
+            setError("Error registering user");
+        }
 }
     return (
         <>
@@ -38,6 +51,7 @@ async function loginUser(event) {
                     onChange={(e) => setPassword(e.target.value)} required />
 
                 <button type="submit">Login</button>
+                {error && <p>{error}</p>}
                 <hr />
                 <p>Create Account
                     <span> <Link to="/signup">Register</Link></span>
@@ -46,7 +60,6 @@ async function loginUser(event) {
                     <p>Test-email : abc@gmail.com</p>
                     <p>Password : 12345678</p>
                 </div>
-
             </div></center>
             </form>
         </>

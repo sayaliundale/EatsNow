@@ -5,11 +5,9 @@ import Footer from "./Components/Footer";
 import { Provider } from "react-redux";
 import appStore from "./Utils/appStore";
 
-
 const App = () => {
   return (
     <>
-    
       <Provider store={appStore}>
         <Header />
         <Outlet />
@@ -18,8 +16,6 @@ const App = () => {
     </>
 
   );
-
 }
-
 
 export default App;
