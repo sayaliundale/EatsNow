@@ -8,11 +8,9 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
-
-    
-async function loginUser(event) {
-    event.preventDefault();
-        console.log("Loging user:", email, password);
+ 
+    async function loginUser(event) {
+        event.preventDefault();
         
         try {
             const response = await fetch("http://localhost:8000/api/login", {
@@ -20,23 +18,27 @@ async function loginUser(event) {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                     email, password
-                })
+                body: JSON.stringify({ email, password })
             });
-    
+
             if (!response.ok) {
-                throw new Error('Failed to register user');
+                throw new Error('Failed to log in');
             }
+
             const data = await response.json();
-            console.log(data);
-            navigate('/');
+     
+            if (data.status === "ok" && data.user) {
+         
+                navigate('/');
+            } else {
+                setError("Invalid email or password");
+            }
             
         } catch (error) {
-            console.error("Error registering user:", error);
-            setError("Error registering user");
+            console.error("Error logging in user:", error);
+            setError("Error logging in user");
         }
-}
+    }
     return (
         <>
             <form onSubmit={loginUser}>
@@ -44,11 +46,11 @@ async function loginUser(event) {
                 <h2>Login</h2>
                 <label htmlFor="username">Eamil :</label>
                 <input type="email" id="email" name="email" autoComplete="off"
-                    onChange={(e) => setEmail(e.target.value)} required />
+                    onChange={(e) => setEmail(e.target.value)}  />
 
                 <label htmlFor="username">Password :</label>
                 <input type="password" id="password" name="password" autoComplete="off"
-                    onChange={(e) => setPassword(e.target.value)} required />
+                    onChange={(e) => setPassword(e.target.value)} />
 
                 <button type="submit">Login</button>
                 {error && <p>{error}</p>}
@@ -58,7 +60,7 @@ async function loginUser(event) {
                 </p>
                 <div class="test-credetionals">
                     <p>Test-email : abc@gmail.com</p>
-                    <p>Password : 12345678</p>
+                    <p>Password : 1234</p>
                 </div>
             </div></center>
             </form>
