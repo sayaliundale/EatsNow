@@ -8,7 +8,6 @@ import useOnline from '../Utils/useOnline';
 import { useNavigate } from 'react-router-dom';
 
 const Intropage = () => {
-  const [showSignup, setSignup] = useState(false);
   const [signupSession, setSignupSession] = useState(false);
   const navigate = useNavigate();
 
@@ -16,7 +15,6 @@ const Intropage = () => {
     const hasSeenSignup = sessionStorage.getItem('hasSeenSignup');
     if (!hasSeenSignup) {
       const timer = setTimeout(() => {
-        setSignup(true);
         setSignupSession(true);
         sessionStorage.setItem('hasSeenSignup', 'true');
       }, 3000);
@@ -34,8 +32,8 @@ const Intropage = () => {
     );
   }
 
-  if (showSignup) {
-    navigate("/signup");
+  if (signupSession) {
+    navigate("/register");
   }
 
   return (

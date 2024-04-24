@@ -8,7 +8,6 @@
     height: auto;
     padding: 2rem;
     border: 1px solid rgb(144, 143, 143);
-    margin-left: 25%;
     margin-top: 4rem;
     margin-bottom: 1.5rem;
     text-align: left;
@@ -39,7 +38,7 @@
     border-radius: 1.1rem;
 }
 
-.addtocart{
+.addtocart {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -116,7 +115,82 @@
 }
 
 .accordion1 {
-
     padding: 3rem;
+}
 
+@media only screen and (max-width:1100px) {
+    .accordion {
+        width: 60%;
+    }
+
+    .item-img img {
+        width: 9rem
+    }
+
+    .addtocart {
+        width: 5rem;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .item h3 {
+        font-size: 1.3rem;
+    }
+
+    .item p:nth-child(2) {
+        font-size: 0.9rem;
+    }
+
+    .item-img img {
+        width: 8rem;
+        height: 5.5rem
+    }
+
+    .addtocart {
+        width: 4rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    .menu {
+        margin-top: 2rem;
+    }
+
+    .menu h1 {
+        font-size: 1.7rem;
+    }
+
+    .item h3 {
+        font-size: 1.2rem;
+    }
+
+    .item p:nth-child(2) {
+        font-size: 0.8rem;
+    }
+
+    .accordion {
+        width: 65%;
+        margin-top: 2rem;
+    }
+
+    .addtocart {
+        width: 3rem;
+    }
+
+    .item-img img {
+        width: 7rem;
+        height: 5rem
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .menu h1 {
+        font-size: 1.5rem;
+    }
+
+    .itemcard {
+        flex-direction: column;
+
+    }
 }

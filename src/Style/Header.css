@@ -185,6 +185,12 @@
 }
 
 @media only screen and (max-width:750px) {
+    .logo img {
+        width: 6rem;
+        height: 3.5rem;
+        margin-top: 1.5rem;
+    }
+
     .login {
         right: 0.5%;
         top: -1rem;
@@ -201,6 +207,12 @@
     .nav-items ul,
     .login {
         font-size: 0.9rem;
+    }
+
+    .hamburger img {
+        width: 1.8rem;
+        height: 1.6rem;
+       
     }
 }
 

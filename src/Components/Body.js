@@ -15,7 +15,7 @@ const Body = () => {
   //Again created it to solve the problem when u search in first you'll  get result but 
   //second time u'll go it will not search 
   const [searchText, setSearchtext] = useState("");
-  const [filterbystar, setFilterByStar] = useState(false);//like flag for checkbox
+  const [filterbystar, setFilterByStar] = useState(false);
   const [isVegOnly, setIsVegOnly] = useState(false);
 
 
@@ -72,7 +72,6 @@ const Body = () => {
       <div className="body">
 
         <div className="rating">
-
           <div className="search-header">
             <h2>Search Filter</h2>
           </div>

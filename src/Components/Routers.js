@@ -6,15 +6,15 @@ import Error from '../Components/Error';
 import Intropage from '../Components/Intropage';
 import Contactus from '../Components/Contactus';
 import RestaurantMenu from './RestaurantMenu';
-import Signup from './Authentication/Signup';
+import Register from './Authentication/Register';
 import Cart from './Cart';
 import Login from './Authentication/Login';
 
 const approuter = createBrowserRouter(
   [
     {
-      path: "/signup", 
-      element: <Signup />
+      path: "/register", 
+      element: <Register />
       
     },
     {

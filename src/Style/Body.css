@@ -64,7 +64,6 @@
     padding-right: 1rem;
     float: right;
     width: 1.5rem;
-    
 }
 
 .serach-filter {
@@ -158,8 +157,6 @@
     opacity: 1;
 }
 
-
-
 .starbutton p {
     display: flex;
     gap: 1rem;
@@ -191,14 +188,11 @@
     overflow: visible;
     overflow-wrap: normal;
     text-decoration: none !important;
-
-
 }
 
 .rest-info a {
     text-decoration: none;
 }
-
 
 .search-info {
     padding-left: 2rem;
@@ -231,7 +225,6 @@
     height: 22rem;
     border-radius: 5px;
     background-color: rgb(236, 235, 235);
-
 }
 
 .onlineStatus {
@@ -294,15 +287,14 @@
 
     .rest-card,
     .shimmer-ui {
-        width: 17rem;
-        height: 22rem;
-
+        width: 14rem;
+        height: 21rem;
+        font-size: 0.9rem;
     }
 
     .rating {
         width: 30%;
         padding-left: 0rem;
-
     }
 
     .container,
@@ -312,14 +304,27 @@
     }
 
     .searchfunc {
-        width: 18rem;
-        font-size: 0.8rem;
-        padding-left: 2rem;
-        ;
+        width: 17rem;
+        height: 2rem;
+        padding-left: 0rem;
     }
 
-    .starbutton {
+    .searchRest {
+        font-size: 0.9rem;
+    }
+
+    .searchfunc span {
+        width: 2rem
+    }
+
+    .searchfunc img {
+        width: 1rem
+    }
+
+    .starbutton,
+    .veg-only {
         width: 18rem;
+        margin-left: 2rem;
     }
 }
 
@@ -352,20 +357,18 @@
 
     .searchRest {
         font-size: 0.9rem;
-
     }
 
     .rest-card,
     .shimmer-ui {
-        width: 15rem;
-        height: 23rem;
-
+        width: 13rem;
+        height: 20rem;
+        font-size: 0.8rem;
     }
 
     .container,
     .shimmer-container {
-        justify-content: space-around;
-        padding: 1rem;
+        padding: 3rem;
     }
 
     .shimmer-container {
@@ -386,7 +389,11 @@
 
     .searchfunc {
         padding: 0rem;
+    }
 
+    .veg-only {
+        margin-top: -4rem;
+        margin-left: 5rem;
     }
 }
 
@@ -396,7 +403,6 @@
     .shimmer-ui {
         width: 13rem;
         height: 23rem;
-
     }
 
     .rating {
@@ -407,25 +413,21 @@
         width: 75%;
         gap: 0.5rem;
         padding-left: 4rem;
-
     }
 
     .searchRest {
         width: 12rem;
         font-size: 0.8rem;
-
     }
 
     .searchfunc {
         padding: 0rem;
         font-size: 0.7rem;
-
     }
 
     .starbutton {
         width: 20rem;
         font-size: 1rem;
-
     }
 
     .starbutton img {
@@ -478,8 +480,8 @@
     }
 
     .starbutton {
-
         width: auto;
+        margin-left: 0rem;
     }
 
     .searchRest {
@@ -493,7 +495,12 @@
 
     .searchfunc {
         height: 2.1rem;
+    }
 
+    .veg-only {
+        margin-top: -3rem;
+        margin-left: 8rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -515,6 +522,10 @@
 
     .rating {
         margin-right: 0;
+    }
+
+    .conatiner {
+        padding-bottom: 5rem;
     }
 
 }

@@ -6,7 +6,6 @@ const Cart = () => {
     const dispatch = useDispatch();
     const cartItems = useSelector(state => state.cart.items);
 
-  // Load cart items from local storage when component mounts
     useEffect(() => {
         const savedCartItems = JSON.parse(localStorage.getItem('cartItems'));
         if (savedCartItems) {
@@ -14,7 +13,7 @@ const Cart = () => {
         }
       }, [dispatch]);
 
-  // Save cart items to local storage whenever cart items change
+  
     useEffect(() => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }, [cartItems]);

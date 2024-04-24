@@ -6,7 +6,7 @@ import Itemlist from './Itemlist';
 
 const RestaurantMenu = () => {
   const [resInfo, setResinfo] = useState(null);
-  const { res_id } = useParams(); // Use res_id instead of resId
+  const { res_id } = useParams(); 
 
   useEffect(() => {
     if (res_id) {

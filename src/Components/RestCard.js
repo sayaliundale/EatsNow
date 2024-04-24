@@ -1,7 +1,6 @@
 import React from "react";
 import Star from "../Imgs/Greenstar.png"
 
-
 const RestCard = (props) => {
     const { resData } = props;
     // Destructure 'resData' from the 'props' object

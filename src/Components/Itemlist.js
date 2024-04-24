@@ -15,23 +15,28 @@ const Itemlist = ({ menuInfo }) => {
   };
 
   return (
-    <div className="accordion">
+
+   <center> <div className="accordion">
+
       {menuInfo?.itemcards?.map((item, index) => (
+
         <div key={index} className="itemcard">
           <div className='item'>
             <h3>{item?.card?.name}</h3>
             <p>{item?.card?.description}</p>
             <p>Price - Rs.{item?.card?.price}</p>
           </div>
+
           <div className="item-img">
             <img src={item?.card?.img} alt="img" />
             <p className="addtocart">
               <span onClick={() => handleAddItem(item?.card)}> + </span>Add
             </p>
           </div>
+
         </div>
       ))}
-    </div>
+    </div></center>
   );
 };
 

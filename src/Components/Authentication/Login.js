@@ -53,10 +53,10 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)} />
 
                 <button type="submit">Login</button>
-                {error && <p>{error}</p>}
+                {error && <p style={{color:"red"}}>{error}</p>}
                 <hr />
                 <p>Create Account
-                    <span> <Link to="/signup">Register</Link></span>
+                    <span> <Link to="/register">Register</Link></span>
                 </p>
                 <div class="test-credetionals">
                     <p>Test-email : abc@gmail.com</p>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../Style/Authentication.css";
 import { Link, useNavigate } from 'react-router-dom';
 
-const Signup = () => {
+const Register = () => {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -58,7 +58,7 @@ const Signup = () => {
                             onChange={(e) => setPassword(e.target.value)} required/>
 
                         <button type="submit">Register</button>
-                        {error && <p>{error}</p>}
+                        {error && <p style={{color:"red"}}>{error}</p>}
                         <hr />
                         <p>Alredy have account ?
                             <span> <Link to="/login">Login</Link></span>
@@ -70,4 +70,4 @@ const Signup = () => {
         </>
     )
 }
-export default Signup;
+export default Register;

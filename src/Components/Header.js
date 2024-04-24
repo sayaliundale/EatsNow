@@ -7,11 +7,12 @@ import more from "../Imgs/more.png"
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { setItems } from '../Utils/cartSlice';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-    const [login, setLogout] = useState("Login");
     const [showMenu, setShowMenu] = useState(false);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const cartItemsRedux = useSelector((store) => store.cart.items);
     
@@ -44,7 +45,7 @@ const Header = () => {
                     </div>
 
                     <div className="login">
-                            <button onClick={() => setLogout(login === "Login" ? "Logout" : "Login")}>{login}</button>
+                            <button onClick={() => navigate("./register")}>Logout</button>
                             <img src={user} alt="user-img" />
                     </div>
 

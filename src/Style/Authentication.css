@@ -1,11 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-   
+
 }
 
-.signup,.login-user {
-    width: 25rem;
+.signup,
+.login-user {
+    width: 23rem;
     height: 30rem;
     background-color: rgb(254, 254, 212);
     margin-top: 5%;
@@ -15,17 +16,19 @@ body {
 
 }
 
-.signup label,.login-user label {
+.signup label,
+.login-user label {
     float: left;
     margin-top: 1.5rem;
 }
 
-.signup input,.login-user input {
+.signup input,
+.login-user input {
     height: 2.3rem;
-
 }
 
-.signup button,.login-user button {
+.signup button,
+.login-user button {
     margin-top: 3rem;
     height: 2.5rem;
     width: 6rem;
@@ -38,7 +41,8 @@ body {
     margin-bottom: 2rem;
 }
 
-.signup p,.login-user p {
+.signup p,
+.login-user p {
     margin-top: 2rem;
 }
 
@@ -47,5 +51,44 @@ body {
 }
 
 .test-credetionals p {
-   margin-top: 0rem;
+    margin-top: 0rem;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .signup,
+    .login-user {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    .signup,
+    .login-user {
+        font-size: 1rem;
+        padding: 2rem;
+        width: 50%;
+        margin-top: 4rem;
+    }
+
+    .signup input,
+    .login-user input {
+        height: 1.8rem;
+    }
+
+    .signup button,
+    .login-user button {
+        margin-top: 2rem;
+        height: 2rem;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .signup p,
+    .login-user p, .test-credetionals {
+
+        font-size: 0.9rem;
+    }
 }
